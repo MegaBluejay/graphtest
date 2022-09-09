@@ -1,0 +1,39 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           graphtest
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/MegaBluejay/graphtest#readme>
+homepage:       https://github.com/MegaBluejay/graphtest#readme
+bug-reports:    https://github.com/MegaBluejay/graphtest/issues
+author:         MegaBluejay
+maintainer:     dmosieev2011@gmail.com
+license:        Unlicense
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/MegaBluejay/graphtest
+
+executable graphtest-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_graphtest
+  hs-source-dirs:
+      app
+  default-extensions:
+      OverloadedStrings, LambdaCase
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N -O2
+  build-depends:
+      JuicyPixels
+    , base >=4.7 && <5
+    , gloss
+    , gloss-juicy
+    , optparse-applicative
+  default-language: Haskell2010

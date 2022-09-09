@@ -1,0 +1,42 @@
+name:                graphtest
+version:             0.1.0.0
+github:              "MegaBluejay/graphtest"
+license:             Unlicense
+author:              "MegaBluejay"
+maintainer:          "dmosieev2011@gmail.com"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on GitHub at <https://github.com/MegaBluejay/graphtest#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- optparse-applicative
+- gloss
+- JuicyPixels
+- gloss-juicy
+
+default-extensions: OverloadedStrings, LambdaCase
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+executables:
+  graphtest-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -O2
+    dependencies: []
